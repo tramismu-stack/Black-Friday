@@ -55,8 +55,7 @@ h1 {
 div.productes {
     display: grid;
     gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
 }
 
 .producte {
@@ -111,4 +110,24 @@ div.productes {
     text-align: center;
     text-decoration: none;
     font-weight: bold;
+}
+
+
+@media (min-width: 576px) {
+    div.productes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    div.productes {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    div.productes {
+        grid-template-columns:repeat(4, 1fr);
+    }
 }
